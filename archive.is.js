@@ -1,9 +1,5 @@
 function openArchiveIs(targeturl) {
-  /* https://twitter.com/archiveis/status/1081276424781287427 */
-	var archiveisurl = new URL("/", "https://archive.today");
-
-	archiveisurl.searchParams.set('run', 1);
-	archiveisurl.searchParams.set('url', targeturl);
+	var archiveisurl = new URL("/" + targeturl, "https://archive.today");
 
 	open(archiveisurl.href);
 }
